@@ -11,14 +11,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 130px;
 }
 
 .header-container {
     background-color: rgb(73, 72, 72);
     display: block;
-    height: 100px;
-    margin-bottom: 40px;
     color: white;
+    position: fixed;
+    width: 100%;
 }
 
 header {
@@ -28,6 +29,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.logo span {
+    font-weight: 800;
 }
 
 a {
@@ -42,10 +47,6 @@ a {
     width: 30%;
     margin-bottom: 40px;
     background-color: rgb(52, 146, 107);
-}
-
-.hide-desktop {
-    display: none;
 }
 
 .col img {
@@ -64,6 +65,14 @@ a {
     font-weight: 900;
 }
 
+.hide-desktop {
+    display: none;
+}
+
+.mobile-wrapper {
+    display: none;
+}
+
 /* Tablet view */
 @media (max-width: 768px) {
     .col {
@@ -72,6 +81,44 @@ a {
 
     .hide-desktop {
         display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        padding: 40px 0px;
+    }
+
+    .container {
+        padding-top: 50px;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .mobile-wrapper {
+        display: block;
+    }
+
+    .mobile-wrapper img {
+        margin-right: 20px;
+    }
+    
+    .mobile-nav {
+        display: none;
+        position: absolute;
+    }
+
+    .mobile-nav a {
+        display: block;
+        background-color: coral;
+        padding: 15px 30px;
+        margin-left: -70px;
+        text-align: center;
+        border: none;
     }
 }
 
